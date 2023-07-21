@@ -25,10 +25,22 @@ def heapSort(arr):
         (arr[i], arr[0]) = (arr[0], arr[i])  # swap
         heapify(arr, i, 0)
 
+arr = [2, 1, 4, 4.5, 5, 6.2, 5, 6, 7, 17.8, 10, 15, 'cat', 'apple', 'ball', 'duck', 'frog', 'eagle', 'green', 25, 3.14, 17, 8]
 
-arr = [2, 1, 4, 5, 6, 7, 10, 15, 25, 17, 8]
-heapSort(arr)
-n = len(arr)
+# Split the list into numbers and strings and float and sort separately
+numbers = [x for x in arr if isinstance(x, int)]
+numbers_float = [x for x in arr if isinstance(x, float)]
+strings = [x for x in arr if isinstance(x, str)]
+
+heapSort(numbers)
+heapSort(numbers_float)
+strings.sort()  # Alphabetical sorting for strings
+
+# Join the three sorted lists again
+arr = numbers + numbers_float + strings
+
 print('Sorted array is')
-for i in range(n):
-    print(arr[i])
+for i in arr:
+    print(i)
+
+
