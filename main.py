@@ -36,11 +36,11 @@ heapSort(numbers)
 heapSort(numbers_float)
 strings.sort()  # Alphabetical sorting for strings
 
-# Join the three sorted lists again
-arr = numbers + numbers_float + strings
+#Sort by number age
+combined_sorted = numbers + numbers_float
+combined_sorted.sort()
+arr = combined_sorted + strings
 
 print('Sorted array is')
 for i in arr:
     print(i)
-
-
