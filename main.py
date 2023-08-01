@@ -37,7 +37,7 @@ def sort_strings(arr):
     return strings
 
 
-arr = [2, 1, 4, 4.5, 5, 6.2, 5, 6, 7, 17.8, 10, 15, 'cat', 'apple', 'ball', 'duck', 'frog', 'eagle', 'green', 25, 3.14,
+arr = [2, 1, 4, 4.5, 5, 6.2, 5, 6, 7, 17.8, 10, 15, 'cat', 'apple', 'pie', 'ball', 'duck', 'frog', 'eagle', 'green', 25, 3.14,
        17, 8]
 
 sorted_numbers_floats = sort_numbers_and_floats(arr)
